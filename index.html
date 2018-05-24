@@ -5,10 +5,30 @@ layout: home
     <div class="spotlight-content"><img class="spotlight-img" src="/img/spotlight.png"></div>
 </div>
 
+<div class="extra2">
+    <p class="inner">/</p><a class="other" href="#">PowerPC Software</a>
+</div>
+
 <div class="categories">
 
     {% for item in site.categories %}
     <div class="category">
+        <div class="category-icon"><img src="/img/app-icons/{{ item.icon }}"></div>
+        <a class="category-link" href="{{ item.permalink  }}">
+            {{ item.title }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="extra1">
+    <p class="inner">/</p><a class="other" href="#">Intel Software</a>
+</div>
+
+<div class="categories-i">
+
+    {% for item in site.categories %}
+    <div class="category-i">
         <div class="category-icon"><img src="/img/app-icons/{{ item.icon }}"></div>
         <a class="category-link" href="{{ item.permalink  }}">
             {{ item.title }}
