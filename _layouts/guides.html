@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+
+
+    <div class="page-content">
+      {% include site-header.html %}
+      <h1 class="centered">Guides</h1>
+      {% for item in site.guides %}
+           <div class="guide centered">
+
+               <a class="guide-link" href="../{{ urlPath }}">
+                  <h3>{{ item.title }}</h3>
+
+               </a>
+
+
+           </div>
+
+           {% endfor %}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
