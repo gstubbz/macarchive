@@ -7,7 +7,7 @@
 
 # Site settings
 include: ['_pages', 'categories', 'guides', 'categories/apps/']
-title: PowerPC Archive
+title: macArchive
 email: keaton.burleson@me.com
 baseurl: "/" # the subpath of your site, e.g. /blog
 # Build settings
@@ -17,4 +17,3 @@ collections:
     output: true
   apps:
     output: true
-
