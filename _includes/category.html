@@ -6,6 +6,11 @@
         <div class="app-icon"><img src="/img/app-icons/{{ item.icon }}"></div>
 
         <p>{{ item.title }}</p>
+        {% if item.download-snow-leopard %}
+        <a class="download-link-snow-leopard" href="{{ item.download-snow-leopard }}"><img class="download-img"
+                                                                                 src="/img/download.gif">Snow Leopard</a>
+        {% endif %}
+
         {% if item.download-leopard %}
         <a class="download-link-leopard" href="{{ item.download-leopard }}"><img class="download-img"
                                                                                  src="/img/download.gif">Leopard</a>
@@ -16,10 +21,15 @@
                                                                  src="/img/download.gif">Download</a>
         {% endif %}
 
-        {% if item.download-leopard %}
         <br>
-        <a class="download-mirror-2" href="{{ item.download-mirror-leopard }}">Mirror</a>
-        <a class="download-mirror-2" href="{{ item.download-mirror-tiger }}">Mirror</a>
+        {% if item.download-snow-leopard %}
+        <a class="download-mirror-2" href="{{ item.download-mirror-snow-leopard }}">Snow Leopard Mirror</a>
+        {% endif %}
+
+        {% if item.download-leopard %}
+
+        <a class="download-mirror-2" href="{{ item.download-mirror-leopard }}">Leopard Mirror</a>
+        <a class="download-mirror-2" href="{{ item.download-mirror-tiger }}">Tiger Mirror</a>
         {% else %}
         {% if item.download-mirror %}
         <a class="download-mirror" href="{{ item.download-mirror }}">Mirror</a>
